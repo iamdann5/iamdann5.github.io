@@ -1,0 +1,54 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: orange;
+	font-family: 'livvic', sans-serif;
+	font-weight: normal;
+}
+
+.logo {
+	color: darkslategray;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-size: 24px;
+}
+
+.nav-links {
+	display: flex;
+	list-style: none;
+	width: 25%;
+	justify-content: space-around;
+}
+
+.nav-links li {
+	list-style: none;
+}
+
+.nav-links a {
+	color: darkslategray;
+	text-decoration: none;
+	letter-spacing: 2.0px;
+	font-weight: bold;
+}
+
+.burger {
+	display: none;
+}
+
+.burger div {
+	width: 30px;
+	height: 3px;
+	background-color: darkslategray;
+	margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+}
