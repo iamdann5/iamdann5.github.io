@@ -24,6 +24,18 @@ const mobileMenuSlide = () => {
 	});
 };
 
-// Invoking the function here
+// const heroParaGlitch = () => {
+// 	// declaring const heroPara and telling what to select
+// 	const heroPara = document.querySelector('.hero-description');
+
+// 	heroPara.addEventListener('onMouseOver', () => {
+// 		heroPara.forEach(link) => {
+// 			heroPara.classList.toggle('hero-description-hover');
+// 		};
+// 	};
+// };
+
+// Invoking the functions here
 
 mobileMenuSlide();
+heroParaGlitch();
