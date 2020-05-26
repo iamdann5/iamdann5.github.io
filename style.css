@@ -57,7 +57,8 @@ nav {
 
 /* body stuff */
 
-h1 {
+h1,
+h2 {
 	font-family: 'livvic', sans-serif;
 	font-size: 40px;
 }
@@ -122,11 +123,18 @@ h1 {
 	text-shadow: -4px 4px 2px orange;
 }
 
+.hero-pic-title {
+	display: block;
+	max-width: 576px;
+	padding-bottom: 40px;
+	background-image: url(http://i.ytimg.com/vi/ykOuLarCKSg/maxresdefault.jpg);
+}
+
 /* For mobile screens */
 
 @media screen and (max-width: 768px) {
 	body {
-		overflow: hidden;
+		overflow-x: hidden;
 	}
 
 	nav {
@@ -191,5 +199,9 @@ h1 {
 		transform: translate(9px, 3px);
 		width: 40px;
 		background-color: orangered;
+	}
+
+	.hero {
+		flex-flow: column wrap;
 	}
 }
