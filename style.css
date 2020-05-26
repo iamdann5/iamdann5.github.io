@@ -14,6 +14,7 @@ nav {
 	background-color: orange;
 	font-family: 'livvic', sans-serif;
 	font-weight: normal;
+	z-index: 100;
 }
 
 .logo {
@@ -104,6 +105,10 @@ h1 {
 	}
 }
 
+.hero {
+	z-index: -100;
+}
+
 .hero-description {
 	font-family: 'montserrat', sans-serif;
 	font-size: 18px;
@@ -119,7 +124,7 @@ h1 {
 
 /* For mobile screens */
 
-@media screen and(max-width: 768px) {
+@media screen and (max-width: 768px) {
 	body {
 		overflow: hidden;
 	}
@@ -127,6 +132,7 @@ h1 {
 	nav {
 		justify-content: space-between;
 		padding: 0 30px 0 20px;
+		order: 100;
 	}
 
 	.nav-links {
