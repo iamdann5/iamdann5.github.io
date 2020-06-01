@@ -24,6 +24,37 @@ const mobileMenuSlide = () => {
 	});
 };
 
+let mouseCursor = document.querySelector('.cursor');
+let navLinks = document.querySelectorAll('.nav-links li');
+let navBar = document.querySelector('nav');
+
+window.addEventListener('mousemove', cursor);
+
+function cursor(e) {
+	mouseCursor.style.top = e.pageY + 'px';
+	mouseCursor.style.left = e.pageX + 'px';
+}
+
+navBar.addEventListener('mouseover', () => {
+	navBar.style.backgroundColor = 'orangered';
+});
+
+navBar.addEventListener('mouseleave', () => {
+	navBar.style.backgroundColor = 'orange';
+});
+
+navLinks.forEach((link) => {
+	link.addEventListener('mouseover', () => {
+		mouseCursor.classList.add('cursor-link-hover');
+		link.classList.add('hovered-link');
+	});
+
+	link.addEventListener('mouseleave', () => {
+		mouseCursor.classList.remove('cursor-link-hover');
+		link.classList.remove('hovered-link');
+	});
+});
+
 // Invoking the functions here
 
 mobileMenuSlide();

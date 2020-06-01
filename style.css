@@ -14,7 +14,7 @@ nav {
 	background-color: orange;
 	font-family: 'livvic', sans-serif;
 	font-weight: normal;
-	z-index: 100;
+	z-index: -2;
 }
 
 .logo {
@@ -34,6 +34,9 @@ nav {
 
 .nav-links li {
 	list-style: none;
+	z-index: 0;
+	padding: 1rem;
+	z-index: 1;
 }
 
 .nav-links a {
@@ -56,6 +59,10 @@ nav {
 }
 
 /* body stuff */
+
+body {
+	cursor: none;
+}
 
 h1,
 h2 {
@@ -130,6 +137,34 @@ h2 {
 	background-image: url(http://i.ytimg.com/vi/ykOuLarCKSg/maxresdefault.jpg);
 }
 
+/* Special effects things */
+
+.cursor {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	border: 3px solid black;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	/* Z-index: 0; */
+	pointer-events: none;
+	transition: all 0.5s ease;
+	transition-property: background, transform, opacity;
+	transform-origin: 100% 100%;
+	z-index: 0;
+}
+
+.cursor-link-hover {
+	transform: scale(1.4);
+	transform-origin: 100% 100%;
+	background-color: orange;
+	opacity: 0.5;
+}
+
+.hovered-link li {
+	color: white;
+}
+
 /* For mobile screens */
 
 @media screen and (max-width: 768px) {
@@ -168,13 +203,13 @@ h2 {
 		}
 		to {
 			opacity: 1;
-			transform: translateX(0px;);
+			transform: translateX(0px);
 		}
 	}
 
 	.burger {
 		display: block;
-		cursor: pointer;
+		cursor: none;
 	}
 
 	.nav-active {
